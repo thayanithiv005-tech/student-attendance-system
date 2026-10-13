@@ -10,7 +10,6 @@ DB_PATH = APP_DIR / "attendance.db"
 
 st.set_page_config(
     page_title="Student Attendance Management System",
-    page_icon="📚",
     layout="wide",
 )
 

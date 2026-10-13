@@ -81,7 +81,7 @@ def attendance_summary():
 
 init_db()
 
-st.title("📚 Student Attendance Management System")
+st.title("Student Attendance Management System")
 st.caption("A simple local attendance tracker built with Python, Streamlit, and SQLite.")
 
 with st.sidebar:

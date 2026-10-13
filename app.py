@@ -247,12 +247,11 @@ elif page == "Attendance Reports":
             )
 
         st.subheader("Export reports")
-        export = summary[["roll_no", "name", "department", "year",
-                          "attended", "absent_days", "marked_days", "Attendance %"]].rename(
-            columns={"roll_no": "Roll Number", "name": "Name", "department": "Department",
-                     "year": "Year", "attended": "Present / Late Days",
-                     "absent_days": "Absent Days", "marked_days": "Marked Days"}
-        )
+        export = summary[[
+            "Roll Number", "Name", "Department", "Year",
+            "Present / Late Days", "Absent Days", "Marked Days", "Attendance %"
+        ]].copy()
+
         st.download_button(
             "Download student summary (CSV)",
             data=export.to_csv(index=False).encode("utf-8"),
